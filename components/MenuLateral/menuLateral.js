@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../src/Link';
+import Link from "../"
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import DraftsIcon from '@material-ui/icons/Drafts';
