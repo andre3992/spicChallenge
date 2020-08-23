@@ -1,0 +1,40 @@
+.menuLateral{
+    left:0;
+    position: absolute;
+    padding-left:25px;
+    line-height: 50px;
+    color:grey;
+}
+.links{
+    padding-top:200px;
+    color:grey
+
+}
+.inProgress{
+    padding-top:100px
+}
+.links :hover {
+    color: purple;
+  }
+
+.inProgress p:hover{
+    color: purple;
+}
+
+.iconMargins{
+    margin-left:15px;
+    color:grey;
+}
+
+.links {
+    text-decoration: none;
+
+  }
+ .iconNames{
+        display: flex;
+    justify-content: space-around;
+    line-height: 18px;
+}
+.icons{
+    display: flex;
+}
