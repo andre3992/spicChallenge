@@ -1,40 +1,47 @@
-.menuLateral{
-    left:0;
-    position: absolute;
-    padding-left:25px;
-    line-height: 50px;
-    color:grey;
+.menuLateral {
+  left: 0;
+  position: absolute;
+  padding-left: 25px;
+  line-height: 50px;
+  color: grey;
 }
-.links{
-    padding-top:200px;
-    color:grey
-
-}
-.inProgress{
-    padding-top:100px
-}
-.links :hover {
-    color: purple;
-  }
-
-.inProgress p:hover{
-    color: purple;
-}
-
-.iconMargins{
-    margin-left:15px;
-    color:grey;
-}
-
 .links {
-    text-decoration: none;
-
-  }
- .iconNames{
-        display: flex;
-    justify-content: space-around;
-    line-height: 18px;
+  padding-top: 200px;
+  color: grey;
 }
-.icons{
-    display: flex;
+.inProgress {
+  padding-top: 100px;
+}
+
+.link :hover {
+  color: #4c62c5 !important;
+}
+.icons :hover {
+  color: #4c62c5 !important;
+}
+.iconsName :hover {
+  color: #4c62c5 !important;
+}
+
+.icons svg {
+  color: grey;
+}
+
+.inProgress p:hover {
+  color: #4c62c5;
+}
+
+.iconMargins {
+  margin-left: 15px;
+  color: grey;
+}
+
+.iconNames {
+  display: flex;
+  justify-content: space-around;
+  line-height: 18px;
+  color: grey;
+}
+.icons {
+  display: flex;
 }
