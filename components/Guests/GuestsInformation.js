@@ -13,7 +13,6 @@ export default class guests extends Component {
       .get(`/users`, {})
       .then((res) => {
         const data = res.data;
-        console.log(data);
       })
       .catch((error) => {
         console.log(error);

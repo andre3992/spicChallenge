@@ -45,3 +45,10 @@
 .icons {
   display: flex;
 }
+
+.guestModal {
+  position: absolute;
+  top: 50;
+  left: 50;
+  color: black;
+}
