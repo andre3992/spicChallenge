@@ -19,19 +19,11 @@
     "react-dom": "latest",
     "serve": "^11.3.2"
   },
- /* "scripts": {
+  "scripts": {
     "heroku-postbuild": "npm run build",
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
-  }*/
-  "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
-    }
+  }
 }
