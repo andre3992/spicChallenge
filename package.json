@@ -19,7 +19,7 @@
     "react-dom": "latest"
   },
   "scripts": {
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm run dev",
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
