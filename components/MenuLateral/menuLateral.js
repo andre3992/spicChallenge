@@ -9,7 +9,11 @@ import GuestsList from "../GuestsList/guestsList";
 export default function MenuLateral(props) {
   return (
     <div className="menuLateral">
-      {props.openGuests ? <GuestsList guests={props.guests} /> : ""}
+      {props.openGuests ? (
+        <GuestsList getDatas={props.getDatas} guests={props.guests} />
+      ) : (
+        ""
+      )}
       <div className="links">
         <Link href="./dashboard" style={{ textDecoration: "none" }}>
           <div className="icons">
@@ -21,7 +25,6 @@ export default function MenuLateral(props) {
             </div>
           </div>
         </Link>
-
         <div onClick={props.openGuestsWindows}>
           <div className="icons">
             <div>

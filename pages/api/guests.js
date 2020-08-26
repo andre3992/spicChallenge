@@ -17,4 +17,25 @@ handler.get(async (req, res) => {
   res.json(doc);
 });
 
-export default handler;
+handler.post(async (req, res) => {
+  let data = req.body;
+  data = JSON.parse(data);
+  data.date = new Date(data.date);
+  let doc = await req.db.collection("guests").insertOne(
+    {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      birthday: data.birthday,
+      country: data.country,
+      town: data.town,
+      address: data.address,
+      company: data.company,
+    },
+    { upsert: true }
+  );
+
+  res.json({ message: "ok" });
+});
+
+export default (req, res) => handler.apply(req, res);

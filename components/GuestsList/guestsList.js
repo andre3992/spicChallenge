@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Modal from "../modal/modal";
+import Button from "react-bootstrap/Button";
+import Form from "../Form/form";
 
 export default function GuestsList(props) {
   const [open, setOpen] = React.useState(false);
   const [guest, setGuest] = useState();
+  const [show, setShow] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
-  //open modal
-  const handleOpen = (guest) => {
-    console.log(guest);
-    setGuest(guest);
-    setOpen(true);
+  const showModal = (x) => {
+    setShow(true);
+    setGuest(x);
   };
 
-  //close modal
-  const handleClose = () => {
-    setOpen(false);
+  const hideModal = () => {
+    setShow(false);
   };
 
-  useEffect(() => {}, [props.guests]);
-
+  const showFormModal = () => {
+    setShowForm(true);
+  };
+  const hideShowForm = () => {
+    setShowForm(false);
+  };
   return (
     <div className="guestsList" key="1231">
       <div className="guestsTop">
@@ -27,11 +31,7 @@ export default function GuestsList(props) {
         <div className="guestsListText">Guest List</div>
       </div>
       {props.guests.map((guest) => (
-        <div
-          className="guestList"
-          key={guest}
-          onClick={() => handleOpen(guest)}
-        >
+        <div className="guestList" key={guest} onClick={() => showModal(guest)}>
           <div class="grid-container">
             <div className="info">Name:</div>
             <div className="info">Email:</div>
@@ -44,13 +44,9 @@ export default function GuestsList(props) {
           </div>
         </div>
       ))}
-      <Modal
-        guest={guest}
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-      />
+      {show ? <Modal handleClose={hideModal} guest={guest} show={show} /> : ""}
+      {showForm ? <Form getDatas={props.getDatas}></Form> : ""}
+      <Button onClick={showFormModal}>Add new user</Button>
     </div>
   );
 }

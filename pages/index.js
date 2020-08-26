@@ -6,24 +6,31 @@ import TopBar from "../components/TopBar/topBar";
 import fetch from "isomorphic-unfetch";
 
 const Index = ({ data }) => {
-  /*  const [results, setResults] = useState(data);
-
-  async function getStaticProps(context) {
-    const res = await fetch("http://localhost:3000/api/daily");
-    const json = await res.json();
-    return (
-      <div>
-        <p> ola </p>
-        {{results.name}}
-      </div>
-    );
-  }
-};
-*/
-
   const [results, setResults] = useState(data);
   const [openGuests, setOpenGuests] = useState(false);
+  const [datas, setDatas] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    birthday: "",
+    country: "",
+    town: "",
+    address: "",
+    company: "",
+  });
+  function getDatas(newData) {
+    setDatas(newData);
+    updateMacros();
+  }
 
+  const updateMacros = async () => {
+    console.log(datas);
+
+    const res = await fetch("http://localhost:3000/api/guests", {
+      method: "post",
+      body: JSON.stringify(datas),
+    });
+  };
   function openGuestsWindows() {
     if (openGuests) {
       setOpenGuests(false);
@@ -39,6 +46,7 @@ const Index = ({ data }) => {
       <Box my={4}>
         <TopBar></TopBar>
         <MenuLateral
+          getDatas={getDatas}
           openGuestsWindows={openGuestsWindows}
           openGuests={openGuests}
           guests={results}

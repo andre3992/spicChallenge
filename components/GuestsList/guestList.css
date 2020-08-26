@@ -49,17 +49,3 @@
 .infoDatabase {
   font-weight: bold;
 }
-
-.modalTop {
-  background-color: #4c62c5;
-  width: 400px;
-  height: 5 0px;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 100px 100px;
-  grid-gap: 10px;
-  background-color: white;
-  color: #444;
-}
