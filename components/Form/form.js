@@ -14,6 +14,7 @@ export default function Form(props) {
   });
 
   function handleChange(evt) {
+    console.log("change")
     const value = evt.target.value;
     setState({
       ...state,
@@ -46,7 +47,7 @@ export default function Form(props) {
           type="number"
           name="phone"
           value={state.phone}
-          onChange={handleChange}
+         onChange={handleChange}
         />
       </label>
       <label>
@@ -94,7 +95,7 @@ export default function Form(props) {
           onChange={handleChange}
         />
       </label>
-      <Button onClick={props.getDatas(state)}>Save</Button>;
+      <Button onClick={()=>props.getDatas(state)}>Save</Button>;
     </form>
   );
 }
