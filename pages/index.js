@@ -20,15 +20,13 @@ const Index = ({ data }) => {
   });
   function getDatas(newData) {
     setDatas(newData);
-    updateMacros();
+    updateMacros(newData);
   }
 
-  const updateMacros = async () => {
-    console.log(datas);
-
+  const updateMacros = async (newData) => {
     const res = await fetch("https://spicchallenge.herokuapp.com/api/guests", {
       method: "post",
-      body: JSON.stringify(datas),
+      body: JSON.stringify(newData),
     });
   };
   function openGuestsWindows() {

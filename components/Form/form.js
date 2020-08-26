@@ -14,7 +14,6 @@ export default function Form(props) {
   });
 
   function handleChange(evt) {
-    console.log("change")
     const value = evt.target.value;
     setState({
       ...state,
