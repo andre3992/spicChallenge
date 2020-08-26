@@ -26,7 +26,7 @@ const Index = ({ data }) => {
   const updateMacros = async () => {
     console.log(datas);
 
-    const res = await fetch("http://localhost:3000/api/guests", {
+    const res = await fetch("https://spicchallenge.herokuapp.com/api/guests", {
       method: "post",
       body: JSON.stringify(datas),
     });
@@ -57,7 +57,7 @@ const Index = ({ data }) => {
 };
 
 Index.getInitialProps = async () => {
-  const res = await fetch("http://localhost:3000/api/guests");
+  const res = await fetch("https://spicchallenge.herokuapp.com/api/guests");
   const json = await res.json();
   return { data: json };
 };
