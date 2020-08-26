@@ -7,6 +7,7 @@
     "@material-ui/icons": "^4.9.1",
     "bootstrap": "^4.5.2",
     "clsx": "latest",
+    "heroku": "^7.42.11",
     "isomorphic-unfetch": "^3.0.0",
     "mongodb": "^3.6.0",
     "mongoose": "^5.10.0",
@@ -19,10 +20,9 @@
   },
   "scripts": {
     "heroku-postbuild": "npm run build",
-    "start": "next start -p $PORT",
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   }
 }
