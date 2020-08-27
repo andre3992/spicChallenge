@@ -90,6 +90,7 @@
 .buttonSave {
   color: #4c62c5;
   font-weight: bold;
+  cursor: pointer;
 }
 .form {
   margin-left: 20px;
