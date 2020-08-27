@@ -51,7 +51,9 @@ export default function GuestsList(props) {
       ))}
       {show ? <Modal handleClose={hideModal} guest={guest} show={show} /> : ""}
       {showForm ? <Form getDatas={props.getDatas}></Form> : ""}
-      <Button onClick={showFormModal}>Add new user</Button>
+      <div onClick={showFormModal} className="button">
+        - Add user
+      </div>
     </div>
   );
 }
