@@ -27,7 +27,7 @@ export default function GuestsList(props) {
   return (
     <div className="guestsList" key="1231">
       <div className="guestsTop">
-        <div className="guestsListTop">
+        <div className="guestsListTop" onClick={props.openGuestsWindows}>
           <div className="closeGuestList">X</div>
           <div className="closeGuestListText">Fechar</div>
         </div>
@@ -35,15 +35,17 @@ export default function GuestsList(props) {
       </div>
       {props.guests.map((guest) => (
         <div className="guestList" key={guest} onClick={() => showModal(guest)}>
-          <div class="grid-container">
-            <div className="info">Name:</div>
-            <div className="info">Email:</div>
-            <div className="info">Town:</div>
-            <div className="info">Phone:</div>
-            <div className="infoDatabase">{guest.name}</div>
-            <div className="infoDatabase">{guest.email}</div>
-            <div className="infoDatabase">{guest.town}</div>
-            <div className="infoDatabase">{guest.phone}</div>
+          <div class="whiteBackground">
+            <div class="grid-container">
+              <div className="info">Name:</div>
+              <div className="info">Email:</div>
+              <div className="info">Town:</div>
+              <div className="info">Phone:</div>
+              <div className="infoDatabase">{guest.name}</div>
+              <div className="infoDatabase">{guest.email}</div>
+              <div className="infoDatabase">{guest.town}</div>
+              <div className="infoDatabase">{guest.phone}</div>
+            </div>
           </div>
         </div>
       ))}

@@ -22,6 +22,7 @@
   background-color: lightgray;
   color: black;
   padding: 2px;
+  padding-left: 12px;
 }
 .modalTop {
   background-color: #4c62c5;
@@ -33,9 +34,9 @@
   position: absolute;
   background: white;
   width: 500px;
-  height: 800px;
+  height: 750px;
   top: 0%;
-  left: 15%;
+  left: 30%;
 }
 
 .display-block {
@@ -66,4 +67,9 @@
   line-height: 16px;
   margin-top: 58px;
   margin-bottom: 50px;
+}
+
+.box1 {
+  color: #4c62c5;
+  height: 38px;
 }

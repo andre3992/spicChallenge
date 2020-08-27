@@ -10,7 +10,11 @@ export default function MenuLateral(props) {
   return (
     <div className="menuLateral">
       {props.openGuests ? (
-        <GuestsList getDatas={props.getDatas} guests={props.guests} />
+        <GuestsList
+          openGuestsWindows={props.openGuestsWindows}
+          getDatas={props.getDatas}
+          guests={props.guests}
+        />
       ) : (
         ""
       )}
