@@ -26,8 +26,6 @@
   justify-content: center;
 }
 
-
-
 .grid-container {
   color: black;
   display: grid;
@@ -47,4 +45,12 @@
 }
 .infoDatabase {
   font-weight: bold;
+}
+
+.guestList {
+  cursor: pointer;
+}
+
+.guestList :hover {
+  background-color: grey;
 }

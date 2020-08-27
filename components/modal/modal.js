@@ -23,7 +23,6 @@ export default function Modal(props) {
           </div>
           <div className="box1">Name</div>
           <div className="box1">Email</div>
-          {console.log(guest)}
           <div className="box2">{guest.name}</div>
           <div className="box2">{guest.email}</div>
           <div className="box1">Phone</div>

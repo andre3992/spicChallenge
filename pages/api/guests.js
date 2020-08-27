@@ -34,8 +34,7 @@ handler.post(async (req, res) => {
     },
     { upsert: true }
   );
-
-  res.json({ message: "ok" });
+  res.json({ message: "Guest adicionado" });
 });
 
 export default (req, res) => handler.apply(req, res);

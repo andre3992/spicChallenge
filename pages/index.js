@@ -7,6 +7,7 @@ import fetch from "isomorphic-unfetch";
 
 const Index = ({ data }) => {
   const [results, setResults] = useState(data);
+  const [addedGuest, setAddedGuest] = useState("");
   const [openGuests, setOpenGuests] = useState(false);
   const [datas, setDatas] = useState({
     name: "",
@@ -20,15 +21,20 @@ const Index = ({ data }) => {
   });
   function getDatas(newData) {
     setDatas(newData);
-    updateMacros(newData);
+    addNewGuest(newData);
   }
-
-  const updateMacros = async (newData) => {
+  const addNewGuest = async (newData) => {
     const res = await fetch("https://spicchallenge.herokuapp.com/api/guests", {
       method: "post",
       body: JSON.stringify(newData),
-    });
+    })
+      .then((response) => response.json())
+      .then((guestAdded) => {
+        setAddedGuest(guestAdded.message);
+        alert(guestAdded.message);
+      });
   };
+
   function openGuestsWindows() {
     if (openGuests) {
       setOpenGuests(false);
