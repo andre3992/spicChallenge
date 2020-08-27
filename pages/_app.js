@@ -8,6 +8,7 @@ import "../components/MenuLateral/menuLateral.css";
 import "../components/TopBar/topBar.css";
 import "../components/GuestsList/guestList.css";
 import "../components/modal/modal.css";
+import "./_app.css";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -23,7 +24,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>My page</title>
+        <title>Spic Challenge</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

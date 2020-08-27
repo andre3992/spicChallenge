@@ -27,7 +27,10 @@ export default function GuestsList(props) {
   return (
     <div className="guestsList" key="1231">
       <div className="guestsTop">
-        <div className="guestsListTop"></div>
+        <div className="guestsListTop">
+          <div className="closeGuestList">X</div>
+          <div className="closeGuestListText">Fechar</div>
+        </div>
         <div className="guestsListText">Guest List</div>
       </div>
       {props.guests.map((guest) => (

@@ -13,22 +13,18 @@
   padding-top: 100px;
 }
 
-.link :hover {
-  color: #4c62c5 !important;
-}
 .icons :hover {
-  color: #4c62c5 !important;
-}
-.iconsName :hover {
-  color: #4c62c5 !important;
+  color: #4c62c5;
+  font-weight: bold;
 }
 
 .icons svg {
   color: grey;
 }
 
-.inProgress p:hover {
+.inProgress div:hover {
   color: #4c62c5;
+  font-weight: bold;
 }
 
 .iconMargins {
@@ -45,8 +41,16 @@
 .icons {
   display: flex;
   cursor: pointer;
+  align-items: center;
+  align-content: center;
+  padding-top: 40px;
 }
-
+.iconsSvg {
+  display: flex;
+}
+.iconNames {
+  margin-left: 15px;
+}
 .guestModal {
   position: absolute;
   top: 50;

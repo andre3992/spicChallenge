@@ -2,35 +2,46 @@
   position: absolute;
   top: 10%;
   left: 170%;
-  width: 750px;
+  width: 850px;
   height: 1000px;
+  background-color: lightgray;
 }
 
 .guestsTop {
   border: 1px solid grey;
   display: flex;
-  width: 750px;
+  width: 850px;
+  height: 140px;
 }
 
 .guestsListTop {
   background-color: #4c62c5;
-  width: 45px;
-  height: 100px;
+  width: 50px;
+  height: 140px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
 }
 .guestsListText {
   display: flex;
   align-items: center;
   font-weight: bold;
   font-size: 25px;
-  width: 705px;
-  justify-content: center;
+  width: 800px;
+  background-color: white;
+  color: black;
+  justify-content: flex-start;
+  padding-left: 15px;
 }
 
 .grid-container {
   color: black;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  background-color: lightgray;
+  margin-left: 55px;
+}
+.grid-container:hover {
+  background-color: white;
 }
 
 .grid-container > div {
@@ -52,5 +63,12 @@
 }
 
 .guestList :hover {
-  background-color: grey;
+  background-color: white;
+}
+.closeGuestList {
+  font-size: 35px;
+}
+
+.closeGuestListText {
+  line-height: 0;
 }

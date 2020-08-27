@@ -17,51 +17,49 @@ export default function MenuLateral(props) {
       <div className="links">
         <Link href="./dashboard" style={{ textDecoration: "none" }}>
           <div className="icons">
-            <div>
+            <div className="iconsSvg">
               <DashboardIcon />
             </div>
-            <div className="iconNames">
-              <span style={{ marginLeft: "15px" }}> Dashboard </span>
-            </div>
+            <div className="iconNames">Dashboard</div>
           </div>
         </Link>
         <div onClick={props.openGuestsWindows}>
           <div className="icons">
-            <div>
+            <div className="iconsSvg">
               <ListAltIcon />
             </div>
             <div className="iconNames">
-              <span style={{ marginLeft: "15px" }}>
-                Guest <br />
-                List
-              </span>
+              Guest <br />
+              List
             </div>
           </div>
         </div>
         <Link href="./campainsInProgress" style={{ textDecoration: "none" }}>
           <div className="icons">
-            <DraftsIcon />
+            <div className="iconsSvg">
+              <DraftsIcon />
+            </div>
             <div className="iconNames">
-              <span style={{ marginLeft: "15px" }}>
-                Campains <br /> in progress
-              </span>
+              Campains <br /> in progress
             </div>
           </div>
         </Link>
 
         <div className="inProgress">
           <p style={{ color: "black", fontWeight: "bold " }}>In progress</p>
-          <p>
-            <UpdateIcon />
-            <span style={{ marginLeft: "15px" }}>
+          <div className="icons">
+            <div className="iconsSvg">
+              <UpdateIcon />
+            </div>
+            <div className="iconNames">
               NEWSLETTER <br />
               LONDON 1
-            </span>
-          </p>
-          <p>
+            </div>
+          </div>
+          <div className="icons">
             <UpdateIcon />
-            <span style={{ marginLeft: "15px" }}>SMS LONDON 1</span>
-          </p>
+            <div className="iconNames">SMS LONDON 1</div>
+          </div>
         </div>
       </div>
     </div>
